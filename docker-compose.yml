@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  tmodloader:
+    image: "jacobsmile/tmodloader1.4:latest"
+    ports:
+      - "7777:7777"
+    volumes:
+      - /home/natsuki/terraria:/root/.local/share/Terraria/tModLoader/Worlds
+      - /root/terraria-server/workshop-mods
+      # - /root/terraria-server/serverconfig.txt
+    environment:
+      TMOD_SHUTDOWN_MESSAGE: "Tchauzinho, tamo desligando!"
+      TMOD_AUTOSAVE_INTERVAL: "15"
+      TMOD_AUTODOWNLOAD: "2824688072,2824688266,2564645933"
+      TMOD_ENABLEDMODS: "2824688072,2824688266,2564645933"
+      TMOD_MOTD: "Server do Chris [c/808080:(que a natsuka ta pagando)]!"
+      TMOD_PASS: "batata"
+      TMOD_MAXPLAYERS: "16"
+      TMOD_WORLDNAME: "Earth"
+      TMOD_WORLDSIZE: "3"
+      TMOD_WORLDSEED: "batata frita com sal e cheddar!"
+      TMOD_USECONFIGFILE: "No"
