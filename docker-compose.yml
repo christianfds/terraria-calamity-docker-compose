@@ -5,10 +5,10 @@ services:
     ports:
       - "7777:7777"
     volumes:
-      - /home/natsuki/terraria:/root/.local/share/Terraria/tModLoader/Worlds
-      - /home/natsuki/terraria-mods/modconfigs:/root/.local/share/Terraria/tModLoader/ModConfigs
+      - /home/natsuki/terraria/:/root/.local/share/Terraria/tModLoader/Worlds/
+      - /home/natsuki/terraria-mods/modconfigs/:/root/.local/share/Terraria/tModLoader/ModConfigs/
       - /home/natsuki/terraria-mods/HEROsModDatabase.json:/root/.local/share/Terraria/tModLoader/HEROsModDatabase.json
-      - /root/terraria-server/workshop-mods
+      - /root/terraria-server/workshop-mods/
       # - /root/terraria-server/serverconfig.txt
     environment:
       TMOD_SHUTDOWN_MESSAGE: "Tchauzinho, tamo desligando!"
